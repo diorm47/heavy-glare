@@ -249,10 +249,10 @@ button {
 }
 
 .main_header_text p {
-  font-size: 19px;
-  line-height: 30px;
-  letter-spacing: 1px;
-  font-weight: 500;
+  font-size: 17px;
+  line-height: 27px;
+  letter-spacing: 0.6px;
+  font-weight: 400;
   margin-bottom: 20px;
 }
 
@@ -290,6 +290,9 @@ button {
   width: 100%;
   max-width: 85%;
   margin: 0 auto;
+}
+.custm-main-wrap-icon-text p {
+  text-align: center;
 }
 .custm-main-wrap-icon-text {
   display: flex;
@@ -349,6 +352,10 @@ button {
 }
 .custm-main-wrap-icon-text .second-text-icon span {
   font-weight: 800;
+  text-align: center;
+}
+.custm-main-wrap-icon-text .second-text-icon p {
+  text-align: center;
 }
 
 .custm-main-wrap-icon-text .third-text-icon img {
@@ -535,8 +542,11 @@ button {
   background: #c00c00;
 }
 .news_letter_wrapper {
-  width: 70%;
+  width: 100%;
+  max-width: 1300px;
   margin: 0 auto;
+  padding-left: 40px;
+  padding-right: 40px;
 }
 .news_letter_text p {
   margin-bottom: 20px;
@@ -837,7 +847,7 @@ footer span {
   padding-bottom: 50px;
 }
 .terms_list {
-  max-width: 466px;
+  max-width: 650px;
   width: 100%;
   margin: 0 auto;
   padding: 30px 0;
@@ -1779,6 +1789,8 @@ nav {
     align-items: center;
     text-align: center;
     gap: 30px;
+    padding-left: 15px;
+    padding-right: 15px;
   }
   .main_nav_bar_left {
     gap: 10px;
@@ -1932,6 +1944,7 @@ nav {
   }
   .top_input_data {
     flex-direction: column;
+    gap: 0;
   }
   .top_input_data div {
     width: 100%;
