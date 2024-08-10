@@ -443,6 +443,15 @@ button {
 .product_item_img img {
   width: 100%;
 }
+.product_item_img {
+  position: relative;
+}
+.product_item_img_icon {
+  position: absolute;
+  width: 24px !important;
+  right: 0;
+  bottom: 40px;
+}
 .product_item_name p {
   font-size: 16px;
   line-height: 140%;
@@ -452,7 +461,26 @@ button {
   text-decoration: none;
   font-weight: 400;
 }
-
+.collections_list .product_item_name p {
+  font-size: 14px;
+  color: #23263b;
+}
+.product_discount {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #e22d2d;
+  color: #fff;
+  font-family: Arial, Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 140%;
+  padding: 2px 8px;
+  border-radius: 20px;
+  text-transform: uppercase;
+  letter-spacing: 0.7px;
+}
 .product_item_price p {
   font-family: inherit;
   font-style: normal;
@@ -461,7 +489,16 @@ button {
   line-height: 140%;
   color: #23263bcd;
 }
-
+.product_item_price_discount p {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 140%;
+  color: #e22d2d;
+}
+.product_item_price_discount span {
+  color: #23263b;
+  padding-left: 10px;
+}
 .show_more {
   display: flex;
   align-items: center;
@@ -1304,7 +1341,28 @@ input:valid ~ label {
 .articles_item img {
   width: 100%;
 }
-
+.articles_pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  margin-top: 50px;
+}
+.articles_pagination img {
+  width: 8px;
+  transform: rotate(-90deg);
+  cursor: pointer;
+}
+.articles_pagination p {
+  font-size: 14px;
+  color: #333;
+  cursor: pointer;
+  transition: all 0.4s ease;
+}
+.articles_pagination p:hover {
+  transition: all 0.4s ease;
+  color: #ff3333;
+}
 .articles_item {
   padding-bottom: 20px;
 }
@@ -1469,11 +1527,74 @@ input:valid ~ label {
 .carousel {
   width: 100%;
 }
+.carousel_main_image {
+  position: relative;
+  cursor: pointer;
+}
 .carousel_main_image img {
   width: 100%;
   height: 460px;
   object-fit: cover;
   border: 1px solid rgba(51, 51, 51, 0.05);
+}
+.product_full_view_btn {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  cursor: pointer;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(51, 51, 51, 0.158);
+  border-radius: 50%;
+  display: none;
+}
+.product_full_view_btn img {
+  width: 12px;
+  height: 12px;
+  border: none;
+}
+.carousel_main_image:hover .product_full_view_btn {
+  display: flex;
+}
+.full_view {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  z-index: 111;
+  top: 0;
+  left: 0;
+  background: #fff;
+  overflow-y: auto;
+  display: none;
+}
+.full_view_images {
+  width: 87%;
+  margin: 0 auto;
+  padding: 20px 0;
+  cursor: nw-resize;
+}
+.full_view_images img {
+  width: 100%;
+  border: 1px solid rgba(51, 51, 51, 0.05);
+  margin-bottom: 10px;
+}
+.full_view .product_full_view_btn {
+  position: fixed;
+  display: flex;
+  right: 50px !important;
+  left: auto;
+  width: 40px;
+  height: 40px;
+}
+.full_view .product_full_view_btn svg {
+  width: 14px;
+  height: 14px;
+}
+.visible_full_view {
+  display: block;
 }
 .carousel_thumbnails {
   display: flex;
@@ -1482,7 +1603,7 @@ input:valid ~ label {
   margin-top: 20px;
 }
 .carousel_thumbnails img {
-  border: 1px solid rgba(51, 51, 51, 0.05);
+  border: 1px solid #3333333f;
   width: 156px;
   height: 156px;
   border-radius: 4px;
@@ -1569,12 +1690,13 @@ input:valid ~ label {
 
 .shippingsAndReturns__wrapper___xp_my {
   display: flex;
-  flex-wrap: wrap;
+
   gap: 20px;
 }
 
 .shippingsAndReturns__text___QCnPm {
   max-width: 440px;
+  width: 50%;
 }
 .shippingsAndReturns__table .td-first {
   font-weight: 700;
@@ -1833,6 +1955,9 @@ nav {
 }
 
 @media only screen and (max-width: 1050px) {
+  .shippingsAndReturns__wrapper___xp_my {
+    flex-wrap: wrap;
+  }
   .container {
     width: 94%;
   }
@@ -1929,6 +2054,10 @@ nav {
 }
 
 @media only screen and (max-width: 500px) {
+  .full_view .product_full_view_btn {
+    right: 20px !important;
+  }
+
   .top_nav_bar .container a:nth-child(1),
   .top_nav_bar .container a:nth-child(3) {
     display: none;

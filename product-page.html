@@ -353,7 +353,10 @@
     <div class="product_page container">
       <div class="product_page_left">
         <div class="carousel">
-          <div class="carousel_main_image">
+          <div class="carousel_main_image" onclick="fullView()">
+            <div class="product_full_view_btn">
+              <img src="./assets/icons/zoom.png" alt="" />
+            </div>
             <img
               id="mainImage"
               src="./assets/images/product-img-1.webp"
@@ -674,6 +677,37 @@
             </div>
           </div>
         </a>
+      </div>
+    </div>
+    <div class="full_view" onclick="fullView()">
+      <div class="product_full_view_btn">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          aria-hidden="true"
+          focusable="false"
+          class="icon icon-close"
+          fill="none"
+          viewBox="0 0 18 17"
+        >
+          <path
+            d="M.865 15.978a.5.5 0 00.707.707l7.433-7.431 7.579 7.282a.501.501 0 00.846-.37.5.5 0 00-.153-.351L9.712 8.546l7.417-7.416a.5.5 0 10-.707-.708L8.991 7.853 1.413.573a.5.5 0 10-.693.72l7.563 7.268-7.418 7.417z"
+            fill="#33333359"
+          ></path>
+        </svg>
+      </div>
+      <div class="full_view_images">
+        <img
+          src="https://heavyglare.com/cdn/shop/files/gunnar_g0005_c011__6.webp?v=1713335337"
+          alt=""
+        />
+        <img
+          src="https://heavyglare.com/cdn/shop/files/gunnar_g0005_c011__6.webp?v=1713335337"
+          alt=""
+        />
+        <img
+          src="https://heavyglare.com/cdn/shop/files/gunnar_g0005_c011__6.webp?v=1713335337"
+          alt=""
+        />
       </div>
     </div>
 
@@ -1070,5 +1104,12 @@
     <script src="./scripts/tabs.js"></script>
     <script src="./scripts/custom-select.js"></script>
     <script src="./scripts/main.js"></script>
+    <script>
+      function fullView() {
+        document
+          .querySelector(".full_view")
+          .classList.toggle("visible_full_view");
+      }
+    </script>
   </body>
 </html>
