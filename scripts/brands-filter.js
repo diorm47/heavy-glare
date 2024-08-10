@@ -3,6 +3,7 @@ document.addEventListener("DOMContentLoaded", function () {
     ".brands_filter_list p, .all_brands_filter p"
   );
   const brandItems = document.querySelectorAll(".brand_item");
+
   const showAllBrands = () => {
     brandItems.forEach((item) => {
       item.style.display = "block";
@@ -13,6 +14,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
   filterList.forEach((filter) => {
     filter.addEventListener("click", () => {
+      filterList.forEach((f) => f.classList.remove("active_filter"));
+
+      filter.classList.add("active_filter");
+
       const filterText = filter.textContent.trim();
       if (filterText === "All Brands") {
         showAllBrands();
