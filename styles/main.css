@@ -134,6 +134,27 @@ button {
   width: 25px;
   height: 25px;
 }
+.main_nav_bar_right a:nth-child(2) {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.main_nav_bar_right a:nth-child(2) img {
+  width: 20px;
+  height: 20px;
+}
+.main_nav_bar_right a:nth-child(3) {
+  width: 25px;
+  height: 25px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.main_nav_bar_right a:nth-child(3) img {
+  width: 45px;
+  height: 45px;
+}
 .main_nav_bar_wrapper {
   position: relative;
 
@@ -387,10 +408,24 @@ button {
 .brands_list {
   display: flex;
   align-items: center;
-  overflow: hidden;
-  gap: 60px;
-}
 
+  gap: 60px;
+  position: relative;
+}
+.brands_list_arrow {
+  position: absolute;
+  width: 13px !important;
+  cursor: pointer;
+}
+.brands_list_arrow_left {
+  transform: rotate(90deg) !important;
+  left: -40px;
+}
+.brands_list_arrow_right {
+  right: 0;
+  right: -40px;
+  transform: rotate(-90deg) !important;
+}
 .brands_list img {
   width: auto;
   max-height: 100%;
@@ -609,6 +644,9 @@ button {
   box-sizing: border-box;
   border-bottom-left-radius: 4px;
   border-top-left-radius: 4px;
+  border-top-right-radius: 0 !important;
+  border-bottom-right-radius: 0 !important;
+
   padding: 0 83px 0 16px;
   height: 40px;
   text-align: left;
@@ -2080,7 +2118,7 @@ nav {
     gap: 10px;
   }
   .collection_item .product_item_name p {
-    font-size: 12px;
+    font-size: 16px;
   }
   .collection_item .product_item_sku p {
     font-size: 10px;
@@ -2157,7 +2195,7 @@ nav {
     padding-right: 20px;
   }
   .bottom_menu_left {
-    gap: 10px;
+    gap: 18px;
   }
   .bottom_menu {
     gap: 20px;
@@ -2206,7 +2244,15 @@ nav {
   .brands_list {
     width: 100%;
     overflow: hidden;
-    overflow-x: auto;
+    /* overflow-x: auto; */
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  .brands_list_arrow_left {
+    left: 0;
+  }
+  .brands_list_arrow_right {
+    right: 0;
   }
   .buy_lenses_wrapper {
     height: auto;
@@ -2221,6 +2267,9 @@ nav {
   .about_products_text {
     display: flex;
     flex-direction: column;
+    width: 100% !important;
+    padding-left: 30px;
+    padding-right: 30px;
   }
   .main_header {
     padding: 10px 0;
@@ -2331,16 +2380,16 @@ nav {
     display: none;
   }
   .main_footer_top {
-    gap: 20px;
+    gap: 40px;
   }
   .footer_logo_block {
     width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
   }
   .news_letter_wrapper {
-    gap: 15px;
+    gap: 20px;
+  }
+  .news_letter_text p {
+    margin-bottom: 15px;
   }
   .collections_header_descriptions {
     display: none;
@@ -2382,6 +2431,12 @@ nav {
   .shippingsAndReturns__text___QCnPm {
     width: 100%;
     max-width: 100%;
+  }
+  .main_footer_top {
+    padding-left: 30px;
+  }
+  .mob_menu_list_item_menu div:nth-child(2) {
+    padding-top: 40px;
   }
 }
 
