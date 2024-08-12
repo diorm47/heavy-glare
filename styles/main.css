@@ -2321,6 +2321,9 @@ nav {
   }
   .main_header {
     padding: 10px 0;
+    background: url(../assets/images/main-header-bg-mob.webp);
+    background-position: center;
+    background-size: cover;
   }
   .main_header_text h1 {
     font-size: 20px;
