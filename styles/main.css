@@ -666,7 +666,7 @@ button {
   letter-spacing: 0px;
   background-color: #fff;
   border: 1px solid rgb(208, 51, 31);
-  border-right: 0 ;
+  border-right: 0;
 }
 .news_letter_input input::placeholder {
   letter-spacing: normal;
@@ -2096,6 +2096,13 @@ nav {
 .shippingsAndReturns__table {
   width: 100%;
 }
+.brands_arrows {
+  width: 100%;
+}
+.brandsSwiper_wrapper {
+  width: 88%;
+  position: relative;
+}
 
 @media only screen and (max-width: 1050px) {
   .shippingsAndReturns__wrapper___xp_my {
@@ -2495,15 +2502,27 @@ nav {
   .main_footer_top {
     padding-left: 30px;
   }
-  .brandsSwiper  {
+  .brandsSwiper {
     padding-left: 5px !important;
     padding-right: 5px !important;
   }
   .brandsSwiper .swiper-slide {
     padding: 0 12px;
   }
-  .brandsSwiper  {
-    padding: 0 10px !important;
+  .brandsSwiper {
+    margin: 0 auto;
+  }
+  .brands_arrows .swiper-button-next {
+    right: -20px;
+  }
+  .brands_arrows .swiper-button-prev {
+    left: -20px;
+  }
+  .brandsSwiper_wrapper {
+  width: 94%;
+  }
+  .brandsSwiper {
+    width: 97%;
   }
 }
 
