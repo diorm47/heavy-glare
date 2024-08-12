@@ -2499,7 +2499,12 @@ nav {
     padding-left: 5px !important;
     padding-right: 5px !important;
   }
-
+  .brandsSwiper .swiper-slide {
+    padding: 0 12px;
+  }
+  .brandsSwiper  {
+    padding: 0 10px !important;
+  }
 }
 
 .prod_desc_mob {
