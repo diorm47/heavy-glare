@@ -403,7 +403,10 @@ button {
 .brands_logo_wrapper {
   display: flex;
   align-items: center;
-  gap: 100px;
+  gap: 30px;
+}
+.brands_logo_title {
+  width: 200px;
 }
 .brands_list {
   display: flex;
@@ -478,6 +481,11 @@ button {
 }
 .product_item_img img {
   width: 100%;
+  transition: all 0.4s ease;
+}
+.product_item_img img:hover {
+  transition: all 0.4s ease;
+  transform: scale(1.06);
 }
 .product_item_img {
   position: relative;
@@ -487,6 +495,7 @@ button {
   width: 24px !important;
   right: 0;
   bottom: 40px;
+  z-index: 10;
 }
 .product_item_name p {
   font-size: 16px;
@@ -689,6 +698,11 @@ button {
   cursor: pointer;
   height: 40px;
   width: 83px;
+  transition: all 0.4s ease;
+}
+.news_letter_input button:hover {
+  transition: all 0.4s ease;
+  background: #dd1d1d !important;
 }
 
 .social-icons-hover-text .social-icons-text {
@@ -868,9 +882,9 @@ footer span {
   background-color: rgb(192, 12, 0);
 }
 
-.product_item:hover .product_item_name p {
-  text-decoration: underline;
-  color: #00458f;
+.product_item:hover .product_item_name p,
+.collection_item:hover .product_item_name p:first-child {
+  color: rgb(192, 12, 0) !important;
 }
 
 .main_nav_bar_right img,
@@ -1175,9 +1189,9 @@ input:valid ~ label {
   padding: 30px 0 40px;
 }
 .collection_text p {
-  font-size: 14px;
+  font-size: 18px;
   color: #333333;
-  line-height: 1.42857143;
+  line-height: 140%;
   margin-bottom: 6px;
   font-family: Arial, Helvetica, sans-serif;
 }
@@ -2050,9 +2064,38 @@ nav {
 .products_descriprion_mobile {
   display: none;
 }
+
+.brandsSwiper .swiper-slide img {
+  width: 100%;
+  max-width: 140px;
+}
+.brandsSwiper .swiper-slide {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  justify-content: center;
+}
+.brands_arrows .swiper-button-prev,
+.brands_arrows .swiper-button-next {
+  color: #000;
+  transform: scale(0.5);
+}
+.brands_arrows .swiper-button-prev {
+  left: 0px;
+}
+.brands_arrows .swiper-button-next {
+  right: 0px;
+}
+.brandsSwiper  {
+  width: 100%;
+}
+
 @media only screen and (max-width: 1050px) {
   .shippingsAndReturns__wrapper___xp_my {
     flex-wrap: wrap;
+  }
+  .brands_logo_title {
+    width: auto;
   }
   .container {
     width: 94%;
@@ -2150,6 +2193,9 @@ nav {
 }
 
 @media only screen and (max-width: 500px) {
+  .brandsSwiper .swiper-slide img {
+    max-width: 100px;
+  }
   .mob_item_carousel {
     display: block;
   }
@@ -2436,7 +2482,6 @@ nav {
   .main_footer_top {
     padding-left: 30px;
   }
- 
 }
 
 .prod_desc_mob {
@@ -2496,4 +2541,10 @@ nav {
 
 .prod_desc_mob {
   margin-bottom: 15px;
+}
+
+.p0 {
+  padding: 0 !important;
+  text-align: center;
+  font-size: 12px !important;
 }

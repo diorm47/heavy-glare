@@ -256,7 +256,7 @@
                 />
               </div>
             </div>
-               <div class="mob_menu_list_item_menu">
+            <div class="mob_menu_list_item_menu">
               <a href="./collections.html" class="mob_menu_list_item_menu_title"
                 ><p>Computer Eyeglasses</p></a
               >
@@ -294,7 +294,7 @@
                 />
               </div>
             </div>
-               <div class="mob_menu_list_item_menu">
+            <div class="mob_menu_list_item_menu">
               <a href="./collections.html" class="mob_menu_list_item_menu_title"
                 ><p>Computer Eyeglasses</p></a
               >
@@ -332,7 +332,7 @@
                 />
               </div>
             </div>
-               <div class="mob_menu_list_item_menu">
+            <div class="mob_menu_list_item_menu">
               <a href="./collections.html" class="mob_menu_list_item_menu_title"
                 ><p>Computer Eyeglasses</p></a
               >
@@ -370,7 +370,7 @@
                 />
               </div>
             </div>
-               <div class="mob_menu_list_item_menu">
+            <div class="mob_menu_list_item_menu">
               <a href="./collections.html" class="mob_menu_list_item_menu_title"
                 ><p>Computer Eyeglasses</p></a
               >
@@ -464,24 +464,85 @@
           <div class="brands_logo_title">
             <h3>We Carry:</h3>
           </div>
-          <div class="brands_list">
-            <img
-              class="brands_list_arrow brands_list_arrow_left"
-              src="./assets/icons/arrow-down.svg"
-              alt=""
-            />
-            <a href="#"><img src="./assets/images/brands/1.png" alt="" /></a>
-            <a href="#"><img src="./assets/images/brands/2.webp" alt="" /></a>
-            <a href="#"><img src="./assets/images/brands/3.webp" alt="" /></a>
-            <a href="#"><img src="./assets/images/brands/4.webp" alt="" /></a>
-            <a href="#"><img src="./assets/images/brands/5.webp" alt="" /></a>
-            <a href="#"><img src="./assets/images/brands/6.webp" alt="" /></a>
-            <a href="#"><img src="./assets/images/brands/7.webp" alt="" /></a>
-            <img
-              class="brands_list_arrow brands_list_arrow_right"
-              src="./assets/icons/arrow-down.svg"
-              alt=""
-            />
+
+          <div class="swiper brandsSwiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <a href="#"
+                  ><img src="./assets/images/brands/1.png" alt=""
+                /></a>
+              </div>
+              <div class="swiper-slide">
+                <a href="#"
+                  ><img src="./assets/images/brands/2.webp" alt=""
+                /></a>
+              </div>
+              <div class="swiper-slide">
+                <a href="#"
+                  ><img src="./assets/images/brands/3.webp" alt=""
+                /></a>
+              </div>
+              <div class="swiper-slide">
+                <a href="#"
+                  ><img src="./assets/images/brands/4.webp" alt=""
+                /></a>
+              </div>
+              <div class="swiper-slide">
+                <a href="#"
+                  ><img src="./assets/images/brands/5.webp" alt=""
+                /></a>
+              </div>
+              <div class="swiper-slide">
+                <a href="#"
+                  ><img src="./assets/images/brands/6.webp" alt=""
+                /></a>
+              </div>
+              <div class="swiper-slide">
+                <a href="#"
+                  ><img src="./assets/images/brands/7.webp" alt=""
+                /></a>
+              </div>
+              <div class="swiper-slide">
+                <a href="#"
+                  ><img src="./assets/images/brands/1.png" alt=""
+                /></a>
+              </div>
+              <div class="swiper-slide">
+                <a href="#"
+                  ><img src="./assets/images/brands/2.webp" alt=""
+                /></a>
+              </div>
+              <div class="swiper-slide">
+                <a href="#"
+                  ><img src="./assets/images/brands/3.webp" alt=""
+                /></a>
+              </div>
+              <div class="swiper-slide">
+                <a href="#"
+                  ><img src="./assets/images/brands/4.webp" alt=""
+                /></a>
+              </div>
+              <div class="swiper-slide">
+                <a href="#"
+                  ><img src="./assets/images/brands/5.webp" alt=""
+                /></a>
+              </div>
+              <div class="swiper-slide">
+                <a href="#"
+                  ><img src="./assets/images/brands/6.webp" alt=""
+                /></a>
+              </div>
+              <div class="swiper-slide">
+                <a href="#"
+                  ><img src="./assets/images/brands/7.webp" alt=""
+                /></a>
+              </div>
+            </div>
+            <div class="brands_arrows">
+              <div class="swiper-button-prev brandsSwiperPrev"></div>
+
+              <div class="swiper-button-next brandsSwiperNext"></div>
+            </div>
           </div>
         </div>
       </div>
@@ -1319,6 +1380,28 @@
           },
           1200: {
             slidesPerView: 5,
+          },
+        },
+      });
+
+      var swiper2 = new Swiper(".brandsSwiper", {
+        loop: false,
+        speed: 500,
+        slidesPerView: 5,
+
+        navigation: {
+          nextEl: ".brandsSwiperNext",
+          prevEl: ".brandsSwiperPrev",
+        },
+        breakpoints: {
+          300: {
+            slidesPerView: 3,
+          },
+          1024: {
+            slidesPerView: 5,
+          },
+          1200: {
+            slidesPerView: 7,
           },
         },
       });
