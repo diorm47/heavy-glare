@@ -884,7 +884,7 @@ footer span {
 
 .product_item:hover .product_item_name p,
 .collection_item:hover .product_item_name p:first-child {
-  color: rgb(192, 12, 0) !important;
+  color: #e22d2d !important;
 }
 
 .main_nav_bar_right img,
@@ -1137,7 +1137,7 @@ input:valid ~ label {
 .collections_header_descriptions {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-between;  background: #242121 !important;
 }
 .collections_header_descriptions img {
   width: 20px;
@@ -1159,6 +1159,7 @@ input:valid ~ label {
   max-width: none;
   text-align: center;
   padding: 15px 2vw;
+  height: 100%;
 }
 .last_i {
   padding-top: 10px !important;
@@ -1740,7 +1741,7 @@ input:valid ~ label {
 }
 
 .products_descriprion_tab table td {
-  padding: 1px 12px;
+  padding: 1px 3px;
   border: none;
 }
 
@@ -2546,5 +2547,5 @@ nav {
 .p0 {
   padding: 0 !important;
   text-align: center;
-  font-size: 12px !important;
+  /* font-size: 12px !important; */
 }
